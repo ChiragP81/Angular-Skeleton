@@ -1,0 +1,40 @@
+.card{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.example-card{
+  margin:200px auto;
+  width: 400px;
+
+  /* background-image: linear-gradient(to right, #8e2de2, #4a00e0); */
+}
+
+
+.title{
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 30px;
+}
+.example-full-width{
+  width: 100%;
+}
+.example-width-a{
+  padding-right: 10px;
+}
+.example-width-b{
+    width: 50%;
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+  margin-bottom: 5px;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

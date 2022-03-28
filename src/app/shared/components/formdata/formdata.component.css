@@ -1,0 +1,18 @@
+.mat-typography {
+  width: 400px;
+  height: 300px;
+}
+.example-full-width{
+  width: 100%;
+}
+.example-width-a{
+  padding-right: 10px;
+}
+.example-width-b{
+    width: 50%;
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+  margin-bottom: 5px;
+}
+

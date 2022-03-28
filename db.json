@@ -1,0 +1,68 @@
+{
+  "regiinfo": [
+    {
+      "fname": "dd",
+      "lname": "dd",
+      "email": "ndn@mail.com",
+      "dob": "2007-03-14T18:30:00.000Z",
+      "gender": "Male",
+      "password": "000000",
+      "id": 5
+    },
+    {
+      "fname": "tapan",
+      "lname": "shah",
+      "email": "tapsha@mail.com",
+      "dob": "2004-05-11T18:30:00.000Z",
+      "gender": "Male",
+      "password": "123456",
+      "id": 6
+    },
+    {
+      "fname": "cdjcn",
+      "lname": "kdcdkc",
+      "email": "dcd@mail.com",
+      "dob": "2022-03-14T18:30:00.000Z",
+      "gender": "Male",
+      "password": "220202",
+      "id": 7
+    },
+    {
+      "fname": "dncjn",
+      "lname": "njcnj",
+      "email": "mxsk@mail.com",
+      "dob": "2022-03-05T18:30:00.000Z",
+      "gender": "Female",
+      "password": "789456",
+      "id": 8
+    },
+    {
+      "fname": "snxksk",
+      "lname": "xn",
+      "email": "mxks@mail.com",
+      "dob": "2020-07-08T18:30:00.000Z",
+      "gender": "Female",
+      "password": "789632",
+      "id": 9
+    },
+    {
+      "fname": "jiscmsk",
+      "lname": "nckdkn",
+      "email": "nmicmi@mail.com",
+      "dob": "2005-07-13T18:30:00.000Z",
+      "gender": "Female",
+      "password": "123654",
+      "id": 10
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
