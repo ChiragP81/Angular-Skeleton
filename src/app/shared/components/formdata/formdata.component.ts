@@ -68,6 +68,14 @@ export class FormdataComponent implements OnInit {
   updatedetails() {
     this.service.putuser(this.regiForm.value, this.data.id).subscribe({
       next: () => {
+        let udata = localStorage.getItem("logged-in-user")
+        if(JSON.parse(udata!).id == this.data.id){
+          let newData:any = this.regiForm.value;
+          newData['id'] = this.data.id
+          localStorage.setItem('logged-in-user',JSON.stringify(newData))
+          this.service.name.next(this.regiForm.value.fname);
+          this.service.userInfo.next(this.regiForm.value);
+        }
         this.regiForm.reset();
         this.snackbar.opensnackbar('Your details are updated successfully');
         this.dialogref.close('update');

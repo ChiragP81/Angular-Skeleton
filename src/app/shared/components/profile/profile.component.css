@@ -29,7 +29,12 @@ body {
 table{
   width:500px;
 }
+.text{
+display: flex;
+align-items: center;
+}
 .leftside{
+  padding-left: 10px;
   font-weight: bold;
 }
 .btn{

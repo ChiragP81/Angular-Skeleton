@@ -17,8 +17,8 @@ export class AuthService {
     if (localStorage.getItem('logged-in-user')) {
       const value = localStorage.getItem('logged-in-user')
       if (value && JSON.parse(value)) {
-        this.name = new BehaviorSubject<string>(JSON.parse(value).fname);
-        this.userInfo = new BehaviorSubject<string>(JSON.parse(value));
+        this.name.next(JSON.parse(value).fname)
+        this.userInfo.next(JSON.parse(value))
       }
     }
   }
