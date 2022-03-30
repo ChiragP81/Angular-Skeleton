@@ -10,15 +10,19 @@ export class AuthService {
 
   baseurl = environment.baseurl;
 
+  userInfo = new BehaviorSubject<any>('');
+
   name = new BehaviorSubject<any>('');
   constructor(private http: HttpClient) {
     if (localStorage.getItem('logged-in-user')) {
       const value = localStorage.getItem('logged-in-user')
       if (value && JSON.parse(value)) {
         this.name = new BehaviorSubject<string>(JSON.parse(value).fname);
+        this.userInfo = new BehaviorSubject<string>(JSON.parse(value));
       }
     }
   }
+
 
   postuser(data: any) {
     return this.http.post<any>(this.baseurl + "regiinfo/", data);

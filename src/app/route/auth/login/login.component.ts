@@ -12,6 +12,8 @@ import { SnackbarService } from 'src/app/shared/services/snackbar.service';
 export class LoginComponent implements OnInit {
 
   hide = true;
+  mail="ndn@mail.com"
+  pass="000000"
   constructor(private service: AuthService,
     private snackbar: SnackbarService,
     private route: Router

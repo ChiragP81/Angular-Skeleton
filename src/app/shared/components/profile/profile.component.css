@@ -1,0 +1,38 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.inf-content {
+  border: 1px solid #dddddd;
+  width: 82%;
+  height: 400px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+  margin: 10px auto;
+  padding: 50px;
+}
+
+.img-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+table{
+  width:500px;
+}
+.leftside{
+  font-weight: bold;
+}
+.btn{
+  position: fixed;
+  right: 10%;
+}

@@ -5,9 +5,8 @@ import { NotfoundComponent } from './shared/components/notfound/notfound.compone
 
 const routes: Routes = [
   { path: 'auth', loadChildren: () => import('./route/auth/auth.module').then(x => x.AuthModule) },
-  { path: 'feature',
-  component:LayoutComponent,
-  loadChildren: () => import('./route/feature/feature.module').then(x => x.FeatureModule) },
+  { path: 'feature',component:LayoutComponent,
+   loadChildren: () => import('./route/feature/feature.module').then(x => x.FeatureModule) },
   { path: '', redirectTo: '/auth/login', pathMatch: 'full' },
   { path: '**', component: NotfoundComponent }
 ];

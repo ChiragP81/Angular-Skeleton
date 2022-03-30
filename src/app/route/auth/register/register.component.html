@@ -41,6 +41,18 @@
           <mat-radio-button value="Female">Female</mat-radio-button>
           <mat-error *ngIf="gender.invalid && gender.touched">Please select your gender</mat-error>
         </mat-radio-group>
+<!--
+        <mat-form-field appearance="legacy" class="example-full-width">
+          <mat-label for="phone">Phone No.</mat-label>
+          <input matInput type="phoneno" name="phone" placeholder="Enter your Phone No." maxlength="10"
+          pattern="^[0-9\-]*$"  #phone="ngModel" ngModel required>
+          <mat-error *ngIf="phone.invalid && phone.touched">
+           <mat-error *ngIf="phone.errors?.['required']">Phone No. is required</mat-error>
+          <mat-error *ngIf="phone.errors?.['pattern']">Enter a valid Phone No. or only number are valid</mat-error>
+          <mat-error  *ngIf="phone.errors?.['maxlength']">Only 10 charachters are allowed</mat-error>
+        </mat-error>
+        </mat-form-field> -->
+
 
 
         <mat-form-field appearance="legacy" class="example-full-width">

@@ -13,7 +13,6 @@ import { ConfirmdialogService } from 'src/app/shared/services/confirmdialog.serv
 export class HeaderComponent implements OnInit {
 
   userData: string = '';
-
   constructor(private route: Router,
     private service: AuthService,
     private dialogservice: ConfirmdialogService
@@ -27,6 +26,7 @@ export class HeaderComponent implements OnInit {
         this.userData = response;
       }
     })
+
   }
 
   logOut() {

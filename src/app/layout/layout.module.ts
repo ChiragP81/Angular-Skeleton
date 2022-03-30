@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../shared/material.module';
 import { LayoutComponent } from './layout.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { FeatureModule } from '../route/feature/feature.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     CommonModule,
     RouterModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    FeatureModule
   ]
 })
 export class LayoutModule { }

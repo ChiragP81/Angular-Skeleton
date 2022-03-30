@@ -1,9 +1,10 @@
-<h2 mat-dialog-title>Add Your Details</h2>
+<h2 mat-dialog-title>{{button}} Your Details</h2>
 <mat-dialog-content class="mat-typography">
 
   <form  [formGroup]="regiForm">
 
         <mat-form-field appearance="legacy" class="example-width-a">
+
           <mat-label for="fname">First Name</mat-label>
           <input matInput type="text" formControlName="fname" placeholder="Enter your Name" required>
           <mat-error  *ngIf="fname?.invalid && fname?.touched && !fname?.errors?.['pattern']">Please enter name</mat-error> <br>

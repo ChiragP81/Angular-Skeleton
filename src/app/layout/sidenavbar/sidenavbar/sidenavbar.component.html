@@ -1,20 +1,18 @@
 <mat-drawer-container class="example-container">
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Company Name</p>
+    <div class="img">
+      <img src="assets/logo.png" alt="Company logo" class="logo">
+    </div>
+
+
 
     <mat-list role="list">
       <mat-list-item role="listitem">
-        <a routerLink="" class="link"><mat-icon>home</mat-icon> Home</a>
+        <a routerLink="/feature/dashboard" class="link"><mat-icon>home</mat-icon> Home</a>
       </mat-list-item>
       <mat-list-item role="listitem">
-        <a routerLink="" class="link">
-          <mat-icon>account_circle</mat-icon>Profile</a
-        >
-      </mat-list-item>
-      <mat-list-item role="listitem">
-        <button>
-          <a routerLink="" class="link"><mat-icon>logout</mat-icon>Logout </a>
-        </button>
+        <a routerLink="/feature/profile" class="link">
+          <mat-icon>account_circle</mat-icon>Profile</a>
       </mat-list-item>
     </mat-list>
   </mat-drawer>

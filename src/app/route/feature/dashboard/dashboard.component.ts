@@ -4,7 +4,6 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { FormdataComponent } from 'src/app/shared/components/formdata/formdata.component';
-import { user } from 'src/app/shared/models/userdetails';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { ConfirmdialogService } from 'src/app/shared/services/confirmdialog.service';
 import { SnackbarService } from 'src/app/shared/services/snackbar.service';
@@ -20,7 +19,6 @@ export class DashboardComponent implements OnInit {
   Paginator!: MatPaginator;
 
 
-  userdata!: user;
 
 
   displayedColumns: string[] = ['id', 'fname', 'email', 'dob', 'age', 'gender', 'actions'];
