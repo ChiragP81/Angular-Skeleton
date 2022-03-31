@@ -5,7 +5,6 @@ import { ConfirmComponent } from './components/confirm/confirm/confirm.component
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { FormdataComponent } from './components/formdata/formdata.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ProfileComponent } from './components/profile/profile.component';
 
 
 
@@ -15,7 +14,6 @@ import { ProfileComponent } from './components/profile/profile.component';
     NotfoundComponent,
     ConfirmComponent,
     FormdataComponent,
-    ProfileComponent,
   ],
   imports: [
     CommonModule,

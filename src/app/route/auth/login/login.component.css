@@ -9,6 +9,7 @@
 .example-card{
   margin:200px auto;
   width: 400px;
+  height: 300px;
   background-color:#ffffff;
 }
 
@@ -32,4 +33,7 @@
 
 .link{
   text-decoration: none;
+}
+.divider{
+  border-top-color: black ;
 }

@@ -24,10 +24,17 @@ table {
   width: 100%;
 }
 
-th,tr{
-  width: 1%;
+td,th{
+  width: 20%;
 }
 th{
   font-weight: 800;
   color: #3f51b5;;
 }
+
+mat-form-field {
+  font-size: 15px;
+  width: 100%;
+}
+
+

@@ -16,7 +16,7 @@ export class FormdataComponent implements OnInit {
   constructor(private formbuilder: FormBuilder,
     private service: AuthService,
     public dialogref: MatDialogRef<FormdataComponent>,
-    public snackbar:SnackbarService,
+    public snackbar: SnackbarService,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
@@ -68,11 +68,11 @@ export class FormdataComponent implements OnInit {
   updatedetails() {
     this.service.putuser(this.regiForm.value, this.data.id).subscribe({
       next: () => {
-        let udata = localStorage.getItem("logged-in-user")
-        if(JSON.parse(udata!).id == this.data.id){
-          let newData:any = this.regiForm.value;
-          newData['id'] = this.data.id
-          localStorage.setItem('logged-in-user',JSON.stringify(newData))
+        let udata = localStorage.getItem("logged-in-user");
+        if (JSON.parse(udata!).id == this.data.id) {
+          let newData: any = this.regiForm.value;
+          newData['id'] = this.data.id;
+          localStorage.setItem('logged-in-user', JSON.stringify(newData))
           this.service.name.next(this.regiForm.value.fname);
           this.service.userInfo.next(this.regiForm.value);
         }

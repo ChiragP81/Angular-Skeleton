@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
-import { user } from "../../models/userdetails";
+import { AuthService } from '../../../shared/services/auth.service';
+import { user } from "../../../shared/models/userdetails";
 import { MatDialog } from '@angular/material/dialog';
-import { FormdataComponent } from '../formdata/formdata.component';
+import { FormdataComponent } from '../../../shared/components/formdata/formdata.component';
 
 @Component({
   selector: 'app-profile',

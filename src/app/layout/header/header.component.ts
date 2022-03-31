@@ -24,8 +24,6 @@ export class HeaderComponent implements OnInit {
     this.service.name.subscribe({
       next: (response) => {
         this.userData = response;
-        console.log(response);
-
       }
     })
 

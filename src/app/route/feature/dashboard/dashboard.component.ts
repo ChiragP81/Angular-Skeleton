@@ -51,6 +51,7 @@ export class DashboardComponent implements OnInit {
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.paginator = this.Paginator;
         this.dataSource.sort = this.sort;
+
       }, error: (err) => {
         console.log(err);
       }

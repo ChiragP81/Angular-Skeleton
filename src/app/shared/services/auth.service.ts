@@ -32,12 +32,12 @@ export class AuthService {
     return this.http.get<any>(this.baseurl + "regiinfo/");
   }
 
-  putuser(data:any, id:number){
+  putuser(data: any, id: number) {
     return this.http.put<any>(this.baseurl + "regiinfo/" + id, data);
   }
 
-  deleteuser(id:number){
-    return this.http.delete<any>(this.baseurl+"regiinfo/" +id);
+  deleteuser(id: number) {
+    return this.http.delete<any>(this.baseurl + "regiinfo/" + id);
   }
 
 }
