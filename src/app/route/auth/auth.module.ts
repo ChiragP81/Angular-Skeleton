@@ -13,7 +13,7 @@ import { EqualpasswordDirective } from 'src/app/shared/directives/equalpassword.
   declarations: [
     LoginComponent,
     RegisterComponent,
-    EqualpasswordDirective
+    EqualpasswordDirective,
   ],
   imports: [
     CommonModule,

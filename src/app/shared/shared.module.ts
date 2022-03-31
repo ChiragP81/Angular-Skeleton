@@ -5,6 +5,7 @@ import { ConfirmComponent } from './components/confirm/confirm/confirm.component
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { FormdataComponent } from './components/formdata/formdata.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommantableComponent } from './components/commantable/commantable.component';
 
 
 
@@ -14,11 +15,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     NotfoundComponent,
     ConfirmComponent,
     FormdataComponent,
+    CommantableComponent,
   ],
   imports: [
     CommonModule,
     MaterialModule,
     ReactiveFormsModule
+  ],
+  exports:[
+    CommantableComponent
   ]
 })
 export class SharedModule { }

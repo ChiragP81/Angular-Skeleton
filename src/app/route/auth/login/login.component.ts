@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { GoogleLoginProvider, SocialAuthService } from 'angularx-social-login';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { SnackbarService } from 'src/app/shared/services/snackbar.service';
 
@@ -16,9 +17,15 @@ export class LoginComponent implements OnInit {
   pass="000000"
   constructor(private service: AuthService,
     private snackbar: SnackbarService,
-    private route: Router
+    private route: Router,
+    private socialAuth:SocialAuthService
   ) { }
   ngOnInit(): void {
+    this.socialAuth.authState.subscribe(
+      (user)=>{
+        console.log(user);
+    });
+
   }
 
 
@@ -41,5 +48,10 @@ export class LoginComponent implements OnInit {
         this.snackbar.opensnackbar('There is some error occur');
       }
     })
+  }
+
+
+  loginwithG(){
+    this.socialAuth.signIn(GoogleLoginProvider.PROVIDER_ID)
   }
 }

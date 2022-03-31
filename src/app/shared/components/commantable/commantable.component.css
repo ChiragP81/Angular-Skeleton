@@ -1,0 +1,13 @@
+body{
+ height:  100%;
+ margin: 0;
+ padding: 0;
+}
+.table1{
+  max-width: 1400px;
+  margin:0 auto;
+  margin: 50px 0px 50px 0px;
+}
+table{
+  width: 100%;
+}
