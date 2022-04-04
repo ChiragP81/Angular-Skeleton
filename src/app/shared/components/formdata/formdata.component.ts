@@ -27,6 +27,7 @@ export class FormdataComponent implements OnInit {
       email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9]+@[a-z0-9]+\.[a-z]{2,4}$')]],
       dob: ['', Validators.required],
       gender: ['', Validators.required],
+      phone: ['',[Validators.required, Validators.pattern('^[6-9]{1}[0-9]{9}$')]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     })
 
@@ -37,6 +38,7 @@ export class FormdataComponent implements OnInit {
       this.regiForm.controls['email'].setValue(this.data.email);
       this.regiForm.controls['dob'].setValue(this.data.dob);
       this.regiForm.controls['gender'].setValue(this.data.gender);
+      this.regiForm.controls['phone'].setValue(this.data.phone);
       this.regiForm.controls['password'].setValue(this.data.password);
 
     }

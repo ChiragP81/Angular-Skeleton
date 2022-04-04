@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit {
 
 
 
-  displayedColumns: string[] = ['id', 'fname', 'email', 'dob', 'age', 'gender', 'actions'];
+  displayedColumns: string[] = ['id', 'fname', 'email', 'phone','dob', 'age', 'gender', 'actions'];
   dataSource!: MatTableDataSource<any>;
 
 

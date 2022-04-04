@@ -35,7 +35,6 @@ export class ProfileComponent implements OnInit {
       if(res=='update'){
         this.getname();
       }
-
     })
   }
 

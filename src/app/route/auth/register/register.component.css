@@ -9,7 +9,7 @@
 .example-card{
   margin:200px auto;
   width: 400px;
-  height: 500px;
+  /* height: 500px; */
   background-color: #fff;
 }
 
@@ -40,3 +40,6 @@
   align-items: center;
 }
 
+.link{
+  margin-bottom: 10%;
+}

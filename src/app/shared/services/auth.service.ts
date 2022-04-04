@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
 import { SocialAuthService, SocialUser } from 'angularx-social-login';
-import { BehaviorSubject, map, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -27,6 +27,9 @@ export class AuthService implements CanActivate {
       }
     }
   }
+
+
+  // This is for social login via google
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):Observable<boolean>{
     return this.socialAuthService.authState.pipe(
       map((socialUser:SocialUser)=>!socialUser),
@@ -55,12 +58,12 @@ export class AuthService implements CanActivate {
     return this.http.delete<any>(this.baseurl + "regiinfo/" + id);
   }
 
+  getimage(){
+    return this.http.get<any>('https://api.pexels.com/v1/563492ad6f91700001000001b3ac8f8bf4874407bd26b5d2d31d1324');
+  }
 
 
 
 }
 
-function tap(arg0: (isLOggedin: boolean) => void): import("rxjs").OperatorFunction<boolean, boolean> {
-  throw new Error('Function not implemented.');
-}
 

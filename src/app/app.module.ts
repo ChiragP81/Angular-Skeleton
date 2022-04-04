@@ -36,7 +36,7 @@ import { GoogleLoginProvider } from 'angularx-social-login';
   providers: [{
     provide: 'SocialAuthServiceConfig',
     useValue: {
-      autoLogin: true,
+      autoLogin: false,
       providers: [
         {
           id: GoogleLoginProvider.PROVIDER_ID,
@@ -54,5 +54,3 @@ export class AppModule { }
 
 
 
-//client secert id:-
-// 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

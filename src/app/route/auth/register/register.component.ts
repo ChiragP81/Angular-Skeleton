@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
       this.service.postuser(form.value).subscribe({
         next: () => {
           this.snackbar.opensnackbar('Register successfully', 1000);
-          this.route.navigate(['/login']);
+          this.route.navigate(['/auth/login']);
         },
         error: () => {
           this.snackbar.opensnackbar('There is some error occur');

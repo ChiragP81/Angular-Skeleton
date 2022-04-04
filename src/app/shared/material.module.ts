@@ -19,6 +19,7 @@ import {MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatDividerModule} from '@angular/material/divider';
 import { MatSortModule } from '@angular/material/sort';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatGridListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatDividerModule
+    MatDividerModule,
+    MatButtonToggleModule
   ],
   exports: [
     MatFormFieldModule,
@@ -65,7 +67,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatDividerModule,
-    MatSortModule
+    MatSortModule,
+    MatButtonToggleModule
   ]
 })
 export class MaterialModule { }

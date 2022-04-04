@@ -6,6 +6,7 @@
       "email": "ndn@mail.com",
       "dob": "2007-03-14T18:30:00.000Z",
       "gender": "Male",
+      "phone": 6123457890,
       "password": "000000",
       "id": 5
     },
@@ -15,6 +16,7 @@
       "email": "tapsha@mail.com",
       "dob": "2004-05-11T18:30:00.000Z",
       "gender": "Male",
+      "phone": 6784591230,
       "password": "123456",
       "id": 6
     },
@@ -24,6 +26,7 @@
       "email": "dcd@mail.com",
       "dob": "2022-03-14T18:30:00.000Z",
       "gender": "Male",
+      "phone": 6987541230,
       "password": "220202",
       "id": 7
     },
@@ -33,6 +36,7 @@
       "email": "mxsk@mail.com",
       "dob": "2022-03-05T18:30:00.000Z",
       "gender": "Female",
+      "phone": 7894561230,
       "password": "789456",
       "id": 8
     },
@@ -42,6 +46,7 @@
       "email": "mxks@mail.com",
       "dob": "2020-07-08T18:30:00.000Z",
       "gender": "Female",
+      "phone": 8745691230,
       "password": "789632",
       "id": 9
     },
@@ -51,8 +56,41 @@
       "email": "nmicmi@mail.com",
       "dob": "2005-07-13T18:30:00.000Z",
       "gender": "Female",
+      "phone": 6123457890,
       "password": "123654",
       "id": 10
+    },
+    {
+      "fname": "Chirag",
+      "lname": "kekemk",
+      "email": "chirag812prajapati@gmail.com",
+      "dob": "2016-05-09T18:30:00.000Z",
+      "gender": "Male",
+      "phone": 6123457890,
+      "password": "000000",
+      "id": 11
+    },
+    {
+      "fname": "ds",
+      "lname": "cndk",
+      "email": "mmw@mail.com",
+      "dob": "2022-03-15T18:30:00.000Z",
+      "gender": "Male",
+      "phone": 6123457890,
+      "password": "000000",
+      "cpassword": "000000",
+      "id": 12
+    },
+    {
+      "fname": "mkxs",
+      "lname": "mdkmc",
+      "email": "mma@mail.com",
+      "dob": "2022-04-11T18:30:00.000Z",
+      "gender": "Female",
+      "phone": 6589741230,
+      "password": "000000",
+      "cpassword": "000000",
+      "id": 13
     }
   ],
   "comments": [
