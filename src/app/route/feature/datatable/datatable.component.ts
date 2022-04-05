@@ -1,7 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 import { PeriodicElement } from 'src/app/shared/models/table';
-import { AuthService } from 'src/app/shared/services/auth.service';
-
 
 const  data1: PeriodicElement[] = [
  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
@@ -24,8 +22,11 @@ export class DatatableComponent implements OnInit {
    shareData = data1;
 
 
-  constructor(private service:AuthService) {}
+
+  constructor( ) {}
   ngOnInit() {
+
   }
+
 
 }

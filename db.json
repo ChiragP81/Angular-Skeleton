@@ -56,7 +56,7 @@
       "email": "nmicmi@mail.com",
       "dob": "2005-07-13T18:30:00.000Z",
       "gender": "Female",
-      "phone": 6123457890,
+      "phone": 7894561230,
       "password": "123654",
       "id": 10
     },
@@ -66,7 +66,7 @@
       "email": "chirag812prajapati@gmail.com",
       "dob": "2016-05-09T18:30:00.000Z",
       "gender": "Male",
-      "phone": 6123457890,
+      "phone": 8794561230,
       "password": "000000",
       "id": 11
     },
@@ -76,9 +76,8 @@
       "email": "mmw@mail.com",
       "dob": "2022-03-15T18:30:00.000Z",
       "gender": "Male",
-      "phone": 6123457890,
+      "phone": 9874561230,
       "password": "000000",
-      "cpassword": "000000",
       "id": 12
     },
     {

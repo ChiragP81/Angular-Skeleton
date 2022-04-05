@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DynamicValComponent } from 'src/app/shared/components/dynamic-val/dynamic-val.component';
 import { LoginGuard } from 'src/app/shared/guard/login.guard';
 import { DatatableComponent } from './datatable/datatable.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   },
   {path:'profile',component:ProfileComponent},
   {path:'datatable',component:DatatableComponent},
+  {path:'dynamic',component:DynamicValComponent},
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
 ];
 

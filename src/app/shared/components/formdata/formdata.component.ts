@@ -107,4 +107,7 @@ export class FormdataComponent implements OnInit {
   get password() {
     return this.regiForm.get('password');
   }
+  get phone(){
+    return this.regiForm.get('phone');
+  }
 }
