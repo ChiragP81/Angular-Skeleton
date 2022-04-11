@@ -13,7 +13,8 @@ export class RegisterComponent implements OnInit {
   dob: any;
   hide = true;
   chide = true;
-  regi: any = {}
+  regi: any = {};
+  loading!:boolean;
   constructor(private service: AuthService,
     private route: Router,
     private snackbar: SnackbarService) { }

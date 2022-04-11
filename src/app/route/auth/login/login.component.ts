@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { GoogleLoginProvider, SocialAuthService, SocialUser } from 'angularx-social-login';
 import { user } from 'src/app/shared/models/userdetails';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { LoaderSService } from 'src/app/shared/services/loader-s.service';
 import { SnackbarService } from 'src/app/shared/services/snackbar.service';
 
 @Component({
@@ -16,23 +17,41 @@ export class LoginComponent implements OnInit {
 
   userData!: user;
   hide = true;
-  mail = ""
-  pass = ""
+  //for social login
+  mail = "";
+  pass = "";
   Emailfield : boolean = true;
+  loading!:boolean;
+
 
   public user: SocialUser = new SocialUser;
 
   constructor(private service: AuthService,
     private snackbar: SnackbarService,
     private route: Router,
-    private socialAuth: SocialAuthService
+    private socialAuth: SocialAuthService,
+    private loaderser:LoaderSService
   ) { }
 
   ngOnInit(): void {
     this.validmail();
 
+    this.loaderser.getloader().subscribe(res =>{
+      this.loading = res;
+    })
+  }
 
 
+  //For checking email is already exist or not
+  validmail() {
+    this.service.getuser().subscribe({
+      next: (res: any) => {
+        for (let i in res) {
+          this.mail = res[i].email;
+          // console.log(this.mail);
+        }
+      }
+    })
 
     //This is for social login via google
     this.socialAuth.authState.subscribe({
@@ -46,22 +65,10 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('logged-in-user', JSON.stringify(guser));
           this.route.navigate(['/feature/dashboard']);
         } else {
-          alert('Error');
+          this.snackbar.opensnackbar('Error');
         }
       }
     });
-  }
-
-
-  validmail() {
-    this.service.getuser().subscribe({
-      next: (res: any) => {
-        for (let i in res) {
-          this.mail = res[i].email;
-          // console.log(this.mail);
-        }
-      }
-    })
   }
 
   onsubmit(form: NgForm) {
@@ -77,7 +84,7 @@ export class LoginComponent implements OnInit {
           this.route.navigate(['/feature/dashboard']);
           this.snackbar.opensnackbar('Successfully login');
         } else {
-          this.snackbar.opensnackbar('Email or Phone no. is not valid');
+          this.snackbar.opensnackbar('User does not exist');
         }
       },
       error: () => {
@@ -101,6 +108,6 @@ export class LoginComponent implements OnInit {
     this.Emailfield = true;
   }
   openPhone(){
-    this.Emailfield =! this.Emailfield;
+    this.Emailfield = !this.Emailfield;
   }
 }

@@ -11,9 +11,9 @@
       "id": 5
     },
     {
-      "fname": "tapans",
-      "lname": "shah",
-      "email": "tapsha@mail.com",
+      "fname": "tatvick",
+      "lname": "pant",
+      "email": "tatvick@mail.com",
       "dob": "2004-05-11T18:30:00.000Z",
       "gender": "Male",
       "phone": 6784591230,
@@ -32,7 +32,7 @@
     },
     {
       "fname": "dncjn",
-      "lname": "njcnj",
+      "lname": "njcn",
       "email": "mxsk@mail.com",
       "dob": "2022-03-05T18:30:00.000Z",
       "gender": "Female",
@@ -71,16 +71,6 @@
       "id": 11
     },
     {
-      "fname": "ds",
-      "lname": "cndk",
-      "email": "mmw@mail.com",
-      "dob": "2022-03-15T18:30:00.000Z",
-      "gender": "Male",
-      "phone": 9874561230,
-      "password": "000000",
-      "id": 12
-    },
-    {
       "fname": "mkxs",
       "lname": "mdkmc",
       "email": "mma@mail.com",
@@ -90,6 +80,38 @@
       "password": "000000",
       "cpassword": "000000",
       "id": 13
+    },
+    {
+      "fname": "John",
+      "lname": "wick",
+      "email": "jhon@mail.com",
+      "dob": "2022-04-02T18:30:00.000Z",
+      "gender": "Male",
+      "phone": 6985741230,
+      "password": "000000",
+      "cpassword": "000000",
+      "id": 14
+    },
+    {
+      "fname": "hdhwdwidi",
+      "lname": "mckdm",
+      "email": "dmm@mail.com",
+      "dob": "2022-04-02T18:30:00.000Z",
+      "gender": "Male",
+      "phone": 7567891230,
+      "password": "000000",
+      "cpassword": "000000",
+      "id": 15
+    },
+    {
+      "fname": "mkks",
+      "lname": "bnm",
+      "email": "mknsm@mail.com",
+      "dob": "2022-02-06T18:30:00.000Z",
+      "gender": "Male",
+      "phone": 6574891230,
+      "password": "000000",
+      "id": 16
     }
   ],
   "comments": [

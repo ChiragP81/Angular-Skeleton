@@ -1,6 +1,6 @@
 <div class="card">
   <mat-card class="example-card">
-    <mat-card-title class="title">Login Form</mat-card-title>
+    <mat-card-title class="title">Log In </mat-card-title>
 
     <div>
       <section align="end">
@@ -75,17 +75,21 @@
         </button>
       </mat-card-actions>
 
-      <div>
-        <a routerLink="/auth/register" class="link">Register</a>
+    <div class="tabs">
+        <a routerLink="/auth/register" class="link">New User?</a>
+        <a href="/auth/forgotPass" class="link">Forgot Password?</a>
       </div>
-      <mat-divider class="divider"> </mat-divider>
+
+      <mat-divider class="divider"></mat-divider>
 
       <mat-card-actions class="google">
-        <button mat-raised-button color="primary" (click)="loginwithG()">
-          Google
+        <button mat-raised-button  (click)="loginwithG()">
+          <img src="assets/googleLogo.png" alt="google logo" class="logo" />
         </button>
       </mat-card-actions>
     </form>
+
+    <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
 
   </mat-card>
 </div>

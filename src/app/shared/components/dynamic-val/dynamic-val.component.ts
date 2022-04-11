@@ -1,5 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms'
+import {FormBuilder,  FormGroup, Validators} from '@angular/forms'
 
 
 
@@ -18,22 +19,21 @@ export class DynamicValComponent implements OnInit {
 
   ngOnInit(): void {
     this.regiForm = this.formbuilder.group({
+      email:[''],
+      phone:[''],
       password: ['',[Validators.required, Validators.minLength(6)]]
     })
-    this.openMail();
 
-    this.regiForm.get('email')?.valueChanges.subscribe(
-      val =>{
-        console.log(val);
-      }
-    )
+    this.openMail();
   }
 
   onSubmit(){
+    this.regiForm.markAllAsTouched();
     if(this.regiForm.valid){
       const value = JSON.stringify(this.regiForm.value);
       console.log(value);
-      // console.log(this.regiForm.value)
+      // this.regiForm.reset();
+      console.log(this.regiForm.value)
     }
   }
 
@@ -48,14 +48,32 @@ export class DynamicValComponent implements OnInit {
   }
   openMail(){
     this.showMail = true;
-    this.regiForm.addControl('email', new FormControl('',
-    [Validators.required, Validators.pattern('^[a-zA-Z0-9]+@[a-z0-9]+\.[a-z]{2,4}$')]));
-    this.regiForm.removeControl('phone');
+    this.regiForm.controls['email'].setValidators([
+      Validators.required, Validators.pattern('^[a-zA-Z0-9]+@[a-z0-9]+\.[a-z]{2,4}$')]);
+    this.regiForm.controls['phone'].clearValidators();
+    this.regiForm.get('email')?.updateValueAndValidity()
+    this.regiForm.get('phone')?.updateValueAndValidity();
   }
   openPhone(){
-    this.showMail =! this.showMail;
-    this.regiForm.addControl('phone', new FormControl('',
-    [Validators.required, Validators.pattern('^[6-9]{1}[0-9]{9}$')]));
-    this.regiForm.removeControl('email');
+    this.showMail = !this.showMail;
+    this.regiForm.controls['phone'].setValidators([Validators.required,Validators.pattern('^[6-9]{1}[0-9]{9}$')]);
+    this.regiForm.controls['email'].clearValidators();
+    this.regiForm.get('email')?.updateValueAndValidity()
+    this.regiForm.get('phone')?.updateValueAndValidity();
+
   }
 }
+
+
+// This is optional when you want the control of form and add the validation  <used of openmail()>
+// this.regiForm.addControl('email', new FormControl('',
+// [Validators.required, Validators.pattern('^[a-zA-Z0-9]+@[a-z0-9]+\.[a-z]{2,4}$')]));
+// this.regiForm.removeControl('phone');
+
+
+    // This is for valuechange functionality
+    // this.regiForm.get('email')?.valueChanges.subscribe(
+    //   val =>{
+    //     console.log(val);
+    //   }
+    // )

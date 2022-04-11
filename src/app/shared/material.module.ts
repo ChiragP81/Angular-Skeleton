@@ -20,6 +20,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatDividerModule} from '@angular/material/divider';
 import { MatSortModule } from '@angular/material/sort';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatTableModule,
     MatPaginatorModule,
     MatDividerModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatProgressBarModule
   ],
   exports: [
     MatFormFieldModule,
@@ -68,7 +70,9 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatPaginatorModule,
     MatDividerModule,
     MatSortModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatProgressBarModule
+
   ]
 })
 export class MaterialModule { }

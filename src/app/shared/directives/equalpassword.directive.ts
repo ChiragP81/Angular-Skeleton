@@ -1,4 +1,4 @@
-import { Directive, Input } from '@angular/core';
+import { Directive, ElementRef, Input } from '@angular/core';
 import { AbstractControl, NG_VALIDATORS } from '@angular/forms';
 
 @Directive({
@@ -13,6 +13,8 @@ export class EqualpasswordDirective {
 
   @Input()
   appEqualpassword!: string;
+
+
 
   validate(control:AbstractControl): {[key:string]:any} | null{
     const controlcomp = control.parent?.get(this.appEqualpassword);

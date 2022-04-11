@@ -51,7 +51,7 @@ export class FormdataComponent implements OnInit {
       if (this.regiForm.valid) {
         this.service.postuser(this.regiForm.value).subscribe({
           next: () => {
-            this.regiForm.reset();
+            // this.regiForm.reset();
             this.snackbar.opensnackbar('Userdetails Added Succesfully');
             this.dialogref.close('save');
           },
