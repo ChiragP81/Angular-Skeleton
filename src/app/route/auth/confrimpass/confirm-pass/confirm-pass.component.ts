@@ -5,35 +5,37 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 import { SnackbarService } from 'src/app/shared/services/snackbar.service';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-confirm-pass',
+  templateUrl: './confirm-pass.component.html',
+  styleUrls: ['./confirm-pass.component.css']
 })
-export class RegisterComponent implements OnInit {
-  dob: any;
+export class ConfirmPassComponent implements OnInit {
+
+  con: any = {};
   hide = true;
   chide = true;
-  regi: any = {};
-  loading!: boolean;
   constructor(
     private service: AuthService,
-    private route: Router,
-    private snackbar: SnackbarService) { }
+    private snackbar: SnackbarService,
+    private route: Router
+  ) { }
 
   ngOnInit(): void {
-  }
 
-  onsubmit(form: NgForm) {
+  }
+  onSubmit(form: NgForm) {
     if (form.valid) {
-      this.service.postuser(form.value).subscribe({
+      this.service.putpass(form.value).subscribe({
         next: () => {
-          this.snackbar.opensnackbar('Register successfully', 1000);
+          this.snackbar.opensnackbar('Your password has been changed');
           this.route.navigate(['/auth/login']);
         },
         error: () => {
-          this.snackbar.opensnackbar('There is some error occur');
+          this.snackbar.opensnackbar('Something went wrong');
         }
       })
+      // console.log(form.value);
     }
   }
+
 }

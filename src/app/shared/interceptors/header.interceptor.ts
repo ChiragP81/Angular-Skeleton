@@ -6,9 +6,10 @@ import {
   HttpInterceptor,
   HttpErrorResponse,
   HttpResponse,
+  HttpEventType,
 
 } from '@angular/common/http';
-import { catchError, delay, finalize, Observable, retry, tap, throwError } from 'rxjs';
+import { catchError, finalize, Observable, retry, tap, throwError } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 import { LoaderSService } from '../services/loader-s.service';
 
@@ -21,6 +22,7 @@ export class HeaderInterceptor implements HttpInterceptor {
   constructor(
     private injector: Injector,
     private loadingse: LoaderSService,
+
   ) { }
 
 
@@ -34,7 +36,8 @@ export class HeaderInterceptor implements HttpInterceptor {
       //for set  a new header
       setHeaders: {
         Authorization: `${token}`
-      }
+      },
+      // url:request.url.replace('http://','htpps://')
     }
     );
 
@@ -57,7 +60,7 @@ export class HeaderInterceptor implements HttpInterceptor {
           return throwError(err);
         }),
         finalize(() => {
-          //showing the time : how many times take API to load
+          //showing the time :- how many times take API to load
           const endDate = Date.now() - this.startDate;
 
           const msg = `Request method: ${request.method} is work on "${request.urlWithParams}" URL ${this.state} in ${endDate}ms.`;

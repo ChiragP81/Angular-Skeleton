@@ -4,6 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { FormdataComponent } from 'src/app/shared/components/formdata/formdata.component';
+import { user } from 'src/app/shared/models/userdetails';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { ConfirmdialogService } from 'src/app/shared/services/confirmdialog.service';
 import { SnackbarService } from 'src/app/shared/services/snackbar.service';
@@ -25,7 +26,8 @@ export class DashboardComponent implements OnInit {
   dataSource!: MatTableDataSource<any>;
 
 
-  constructor(private service: AuthService,
+  constructor(
+    private service: AuthService,
     private dialog: MatDialog,
     public dialogservice: ConfirmdialogService,
     public snackbar: SnackbarService) {
@@ -33,6 +35,16 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.getdetails();
+    this.getdata();
+  }
+
+  getdata(){
+    this.service.getText('assets/ex1.txt').subscribe(
+      res=>{
+        console.log(res);
+
+      }
+    )
   }
 
   adddata() {

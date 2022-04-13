@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.validmail();
+    // this.validmail();
 
     this.loaderser.getloader().subscribe(res =>{
       this.loading = res;
@@ -52,6 +52,7 @@ export class LoginComponent implements OnInit {
         }
       }
     })
+
 
     //This is for social login via google
     this.socialAuth.authState.subscribe({

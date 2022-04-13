@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DynamicValComponent } from 'src/app/shared/components/dynamic-val/dynamic-val.component';
 import { LoginGuard } from 'src/app/shared/guard/login.guard';
 import { DatatableComponent } from './datatable/datatable.component';
+import { PostsComponent } from './post/posts/posts.component';
 import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'profile',component:ProfileComponent},
   {path:'datatable',component:DatatableComponent},
   {path:'dynamic',component:DynamicValComponent},
+  {path:'post',component:PostsComponent},
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
 ];
 

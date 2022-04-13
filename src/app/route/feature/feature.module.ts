@@ -8,13 +8,15 @@ import { DatatableComponent } from './datatable/datatable.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DynamicValComponent } from 'src/app/shared/components/dynamic-val/dynamic-val.component';
+import { PostsComponent } from './post/posts/posts.component';
 
 
 @NgModule({
   declarations: [
     ProfileComponent,
     DatatableComponent,
-    DynamicValComponent
+    DynamicValComponent,
+    PostsComponent
 
   ],
   imports: [

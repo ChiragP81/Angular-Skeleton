@@ -1,0 +1,41 @@
+<div class="base">
+  <mat-card class="card">
+    <form #passForm="ngForm" (ngSubmit)="onSubmit(passForm)">
+      <mat-card-title style="text-align: center;">Change Password</mat-card-title>
+      <mat-card-content>
+        <mat-form-field appearance="legacy" class="example-full-width">
+          <mat-label for="password">Password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" name="password" minlength="6" #password="ngModel"
+            placeholder="Enter your Password" [(ngModel)]="con.password" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" type="button"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="password.invalid && password.touched">
+            <mat-error *ngIf="password.errors?.['required']">Password is required</mat-error>
+            <mat-error *ngIf="password.errors?.['minlength']">Password must be 6 characters long</mat-error>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy" class="example-full-width">
+          <mat-label for="cpassword">Confirm Password</mat-label>
+          <input matInput [type]="chide ? 'password':'text' " name="cpassword" minlength="6" #cpassword="ngModel"
+            appEqualpassword="password" placeholder="Enter your confirm password" ngModel required>
+          <button mat-icon-button matSuffix (click)="chide = !chide" [attr.aria-label]="'Hide password'" type="button"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{chide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="cpassword.invalid && cpassword.touched">
+            <mat-error *ngIf="cpassword.errors?.['required']">Please confirm your password</mat-error>
+            <mat-error *ngIf="cpassword.errors?.['minlength']">Confirm password must be 6 characters long</mat-error>
+            <mat-error *ngIf="cpassword.hasError('unEqual')">Password and Confirm password must match</mat-error>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-card-actions class="center">
+          <button mat-raised-button color="primary" type="submit" [disabled]="!passForm.valid">Submit</button>
+        </mat-card-actions>
+      </mat-card-content>
+    </form>
+  </mat-card>
+</div>

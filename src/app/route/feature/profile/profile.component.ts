@@ -17,10 +17,10 @@ export class ProfileComponent implements OnInit {
     public dialog:MatDialog) { }
 
   ngOnInit(): void {
-  this.getname()
+  this.getinfo()
   }
 
-  getname(){
+  getinfo(){
     this.service.userInfo.subscribe({
       next:(response:any)=>{
         this.userData = response;
@@ -33,7 +33,7 @@ export class ProfileComponent implements OnInit {
       data:userData
     }).afterClosed().subscribe(res=>{
       if(res=='update'){
-        this.getname();
+        this.getinfo();
       }
     })
   }

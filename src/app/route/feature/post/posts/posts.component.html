@@ -1,0 +1,44 @@
+<div claas="base">
+  <ng-container *ngFor="let user of userDetails">
+
+    <mat-card class="card">
+      <mat-card-title>
+
+        {{user.fname}}
+      </mat-card-title>
+      <mat-card-content>
+        <table>
+          <tr>
+            <td>Email:</td>
+            <td>{{user.email}}</td>
+          </tr>
+          <tr>
+            <td>Mobile No.</td>
+            <td>{{user.phone}}</td>
+          </tr>
+          <tr>
+            <td>Date of birth</td>
+            <td>{{user.dob | date}}</td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>{{user.gender}}</td>
+          </tr>
+          <tr>
+            <td>password</td>
+            <td>{{user.password}}</td>
+          </tr>
+
+        </table>
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-button color="primary" type="button" (click)="editData(userDetails)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-button color="accent" type="button" (click)="deleteData()">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</div>

@@ -112,6 +112,17 @@
       "phone": 6574891230,
       "password": "000000",
       "id": 16
+    },
+    {
+      "fname": "vbn",
+      "lname": "vbn",
+      "email": "chiragprajapati8112000@gmail.com",
+      "dob": "2022-04-02T18:30:00.000Z",
+      "gender": "Male",
+      "phone": 7154289630,
+      "password": "000000",
+      "cpassword": "000000",
+      "id": 17
     }
   ],
   "comments": [

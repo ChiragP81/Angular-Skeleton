@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { EqualpasswordDirective } from 'src/app/shared/directives/equalpassword.directive';
 import { NgHttpLoaderModule } from 'ng-http-loader';
 import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
+import { ConfirmPassComponent } from './confrimpass/confirm-pass/confirm-pass.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
     RegisterComponent,
     EqualpasswordDirective,
     ForgotPassComponent,
+    ConfirmPassComponent,
 
   ],
   imports: [
