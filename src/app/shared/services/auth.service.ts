@@ -1,4 +1,4 @@
-import { HttpClient, HttpErrorResponse, HttpEvent, HttpEventType, HttpHeaders, HttpRequest } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
 import { SocialAuthService, SocialUser } from 'angularx-social-login';
@@ -19,7 +19,7 @@ export class AuthService implements CanActivate {
 
   token = 'mcf-vg-bhn-jmk'
 
-  //  For adinf headers
+  //  For adding headers
   //  httpOptions = {
   //   Headers: new HttpHeaders({
   //     'Content-Type':'appliaction/json',
@@ -32,7 +32,7 @@ export class AuthService implements CanActivate {
     private router: Router,
     private socialAuthService: SocialAuthService,
     private authFire: AngularFireAuth,
-    private snackbar:SnackbarService
+    private snackbar: SnackbarService
   ) {
 
     if (localStorage.getItem('logged-in-user')) {
@@ -67,31 +67,31 @@ export class AuthService implements CanActivate {
 
   getuser() {
     return this.http.get<any>(this.baseurl + "regiinfo/")
-    .pipe(catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   putuser(data: any, id: number) {
     return this.http.put<any>(this.baseurl + "regiinfo/" + id, data)
-    .pipe(catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   deleteuser(id: number) {
     return this.http.delete<any>(this.baseurl + "regiinfo/" + id)
-    .pipe(catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
-  getText(filename:string){
-    return this.http.get(filename,{responseType:'text'})
-    .pipe(
-      tap({
-        next:(res)=>{
-          console.log(filename+":"+res);
-        },
-        error:(err)=>{
-          console.log(filename,err);
-        }
-      })
-    )
+  getText(filename: string) {
+    return this.http.get(filename, { responseType: 'text' })
+      .pipe(
+        tap({
+          next: (res) => {
+            console.log(filename + ":" + res);
+          },
+          error: (err) => {
+            console.log(filename, err);
+          }
+        })
+      )
   }
 
 
@@ -122,9 +122,9 @@ export class AuthService implements CanActivate {
     );
   }
 
-  putpass(data:any){
-    return this.http.put<any>(this.baseurl+"regiinfo/",data)
-    .pipe(catchError(this.handleError));
+  putpass(data: any) {
+    return this.http.put<any>(this.baseurl + "regiinfo/", data)
+      .pipe(catchError(this.handleError));
   }
 }
 

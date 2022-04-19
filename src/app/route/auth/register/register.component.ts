@@ -14,7 +14,6 @@ export class RegisterComponent implements OnInit {
   hide = true;
   chide = true;
   regi: any = {};
-  loading!: boolean;
   constructor(
     private service: AuthService,
     private route: Router,

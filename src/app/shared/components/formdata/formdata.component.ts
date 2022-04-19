@@ -78,7 +78,7 @@ export class FormdataComponent implements OnInit {
           this.service.name.next(this.regiForm.value.fname);
           this.service.userInfo.next(this.regiForm.value);
         }
-        this.regiForm.reset();
+        // this.regiForm.reset();
         this.snackbar.opensnackbar('Your details are updated successfully');
         this.dialogref.close('update');
       },

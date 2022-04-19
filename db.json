@@ -21,36 +21,6 @@
       "id": 6
     },
     {
-      "fname": "cdjcn",
-      "lname": "kdcdkc",
-      "email": "dcd@mail.com",
-      "dob": "2022-03-14T18:30:00.000Z",
-      "gender": "Male",
-      "phone": 6987541230,
-      "password": "220202",
-      "id": 7
-    },
-    {
-      "fname": "dncjn",
-      "lname": "njcn",
-      "email": "mxsk@mail.com",
-      "dob": "2022-03-05T18:30:00.000Z",
-      "gender": "Female",
-      "phone": 7894561230,
-      "password": "789456",
-      "id": 8
-    },
-    {
-      "fname": "snxksk",
-      "lname": "xn",
-      "email": "mxks@mail.com",
-      "dob": "2020-07-08T18:30:00.000Z",
-      "gender": "Female",
-      "phone": 8745691230,
-      "password": "789632",
-      "id": 9
-    },
-    {
       "fname": "jiscmsk",
       "lname": "nckdkn",
       "email": "nmicmi@mail.com",
@@ -123,6 +93,27 @@
       "password": "000000",
       "cpassword": "000000",
       "id": 17
+    },
+    {
+      "fname": "bnm",
+      "lname": "bnm",
+      "email": "ghjm@mail.cpm",
+      "dob": "2022-04-02T18:30:00.000Z",
+      "gender": "Male",
+      "phone": 7569841230,
+      "password": "123456",
+      "cpassword": "123456",
+      "id": 18
+    },
+    {
+      "fname": "vbnms",
+      "lname": "vbnm",
+      "email": "vbnm@mail.com",
+      "dob": "2022-04-02T18:30:00.000Z",
+      "gender": "Male",
+      "phone": 7548956123,
+      "password": "000000",
+      "id": 19
     }
   ],
   "comments": [

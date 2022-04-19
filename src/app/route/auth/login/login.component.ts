@@ -42,6 +42,30 @@ export class LoginComponent implements OnInit {
   }
 
 
+
+  onsubmit(form: NgForm) {
+    this.service.getuser().subscribe({
+      next: (res: any) => {
+        const user = res.find((val: any) => {
+          return val.email == form.value.email && val.password == form.value.password ||
+          val.phone == form.value.phone && val.password == form.value.password
+        });
+        if (user) {
+          localStorage.setItem('token', 'logintoken');
+          localStorage.setItem('logged-in-user', JSON.stringify(user));
+          this.route.navigate(['/feature/dashboard']);
+          this.snackbar.opensnackbar('Successfully login');
+        } else {
+          this.snackbar.opensnackbar('User does not exist');
+        }
+      },
+      error: () => {
+        this.snackbar.opensnackbar('There is some error occur');
+      }
+    })
+  }
+
+
   //For checking email is already exist or not
   validmail() {
     this.service.getuser().subscribe({
@@ -71,30 +95,6 @@ export class LoginComponent implements OnInit {
       }
     });
   }
-
-  onsubmit(form: NgForm) {
-    this.service.getuser().subscribe({
-      next: (res: any) => {
-        const user = res.find((val: any) => {
-          return val.email == form.value.email && val.password == form.value.password ||
-           val.phone == form.value.phone && val.password == form.value.password
-        });
-        if (user) {
-          localStorage.setItem('token', 'logintoken');
-          localStorage.setItem('logged-in-user', JSON.stringify(user));
-          this.route.navigate(['/feature/dashboard']);
-          this.snackbar.opensnackbar('Successfully login');
-        } else {
-          this.snackbar.opensnackbar('User does not exist');
-        }
-      },
-      error: () => {
-        this.snackbar.opensnackbar('There is some error occur');
-      }
-    })
-  }
-
-
 
 
   loginwithG() {

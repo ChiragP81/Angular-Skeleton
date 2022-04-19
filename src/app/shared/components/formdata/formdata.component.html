@@ -7,9 +7,11 @@
 
       <mat-label for="fname">First Name</mat-label>
       <input matInput type="text" formControlName="fname" placeholder="Enter your Name" required>
-      <mat-error *ngIf="fname?.invalid && fname?.touched && !fname?.errors?.['pattern']">Please enter name</mat-error>
-      <br>
-      <mat-error *ngIf="fname?.errors?.['pattern'] ">Only charachters are allowed</mat-error>
+
+      <mat-error *ngIf="fname?.invalid && fname?.touched">
+        <mat-error *ngIf="fname?.errors?.['required']">Please enter your name</mat-error>
+        <mat-error *ngIf="fname?.errors?.['pattern'] ">Only charachters are allowed</mat-error>
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="legacy" class="example-width-b">

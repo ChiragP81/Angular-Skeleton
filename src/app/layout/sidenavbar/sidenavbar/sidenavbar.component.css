@@ -4,14 +4,19 @@
   margin: 0%;
 }
 
-.example-sidenav-content {
-  display: flex;
-  width: 100%;
-}
-
 .example-sidenav {
   padding: 20px;
   background-color: #0450c2;
+}
+
+.img{
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 
 .link {
@@ -20,12 +25,11 @@
   text-decoration: none;
   color: white;
 }
-.logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-}
 .text{
   padding-left: 10px;
 }
 
+.example-sidenav-content {
+  display: flex;
+  width: 100%;
+}

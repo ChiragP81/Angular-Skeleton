@@ -4,9 +4,9 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { FormdataComponent } from 'src/app/shared/components/formdata/formdata.component';
-import { user } from 'src/app/shared/models/userdetails';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { ConfirmdialogService } from 'src/app/shared/services/confirmdialog.service';
+import { SWupdateService } from 'src/app/shared/services/s-wupdate.service';
 import { SnackbarService } from 'src/app/shared/services/snackbar.service';
 
 @Component({
@@ -30,28 +30,32 @@ export class DashboardComponent implements OnInit {
     private service: AuthService,
     private dialog: MatDialog,
     public dialogservice: ConfirmdialogService,
-    public snackbar: SnackbarService) {
+    public snackbar: SnackbarService,
+    public swupdate: SWupdateService
+  ) {
+
   }
 
   ngOnInit(): void {
     this.getdetails();
-    this.getdata();
+    // this.getdata();
   }
 
-  getdata(){
+  getdata() {
     this.service.getText('assets/ex1.txt').subscribe(
-      res=>{
+      res => {
         console.log(res);
 
       }
     )
   }
 
+
   adddata() {
     this.dialog.open(FormdataComponent, {
       disableClose: true
     }).afterClosed().subscribe(val => {
-      if (val === 'save') {
+      if (val == 'save') {
         this.getdetails();
       }
     })
@@ -89,7 +93,9 @@ export class DashboardComponent implements OnInit {
       cancelText: '',
     }).afterClosed().subscribe(
       res => {
-        res == true ? this.confirmdel(id) : '';
+        if (res) {
+          this.confirmdel(id)
+        }
       }
     )
   }

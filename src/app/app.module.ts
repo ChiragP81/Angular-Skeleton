@@ -11,16 +11,14 @@ import { SharedModule } from './shared/shared.module';
 import { LayoutModule } from './layout/layout.module';
 import { SocialAuthServiceConfig, SocialLoginModule, } from 'angularx-social-login';
 import { GoogleLoginProvider } from 'angularx-social-login';
-// import { NgHttpLoaderModule } from 'ng-http-loader';
 import { HeaderInterceptor } from './shared/interceptors/header.interceptor';
-import {  AngularFireModule  } from "@angular/fire/compat";
+import { AngularFireModule } from "@angular/fire/compat";
 import { environment } from 'src/environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
-    AppComponent,
-
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -41,10 +39,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
       registrationStrategy: 'registerWhenStable:30000'
     })
   ],
-  exports: [MaterialModule,
+  exports: [
+    MaterialModule,
     FeatureModule,
     SharedModule,
-
   ],
   providers: [{
     provide: 'SocialAuthServiceConfig',
@@ -61,9 +59,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
       }
     } as SocialAuthServiceConfig,
   },
-  {provide: HTTP_INTERCEPTORS, useClass:HeaderInterceptor, multi:true}
+  { provide: HTTP_INTERCEPTORS, useClass: HeaderInterceptor, multi: true }
 
-],
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

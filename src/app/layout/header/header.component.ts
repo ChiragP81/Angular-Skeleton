@@ -36,7 +36,10 @@ export class HeaderComponent implements OnInit {
       cancelText: '',
     }).afterClosed().subscribe(
       res => {
-        res == true ? this.confirmlogout() : '';
+        if(res){
+          this.confirmlogout();
+        }
+        // res == true ? this.confirmlogout() : '';
       }
     )
   }

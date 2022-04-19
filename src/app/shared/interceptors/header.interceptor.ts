@@ -10,7 +10,6 @@ import {
 
 } from '@angular/common/http';
 import { catchError, finalize, Observable, retry, tap, throwError } from 'rxjs';
-import { AuthService } from '../services/auth.service';
 import { LoaderSService } from '../services/loader-s.service';
 
 @Injectable()
@@ -30,8 +29,7 @@ export class HeaderInterceptor implements HttpInterceptor {
 
     this.loadingse.show();
     const token = 'mcf-vg-bhn-jmk'
-    //Another way to inject something like service or anything
-    let authService = this.injector.get(AuthService);
+
     const authReq = request.clone({
       //for set  a new header
       setHeaders: {

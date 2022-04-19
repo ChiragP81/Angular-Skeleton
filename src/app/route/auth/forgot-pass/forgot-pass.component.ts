@@ -9,8 +9,11 @@ import { SnackbarService } from 'src/app/shared/services/snackbar.service';
   templateUrl: './forgot-pass.component.html',
   styleUrls: ['./forgot-pass.component.css']
 })
+
 export class ForgotPassComponent implements OnInit {
 
+
+  userId!:string ;
   mailForm!: FormGroup;
   isValid: Boolean = false;
   constructor(
@@ -34,14 +37,15 @@ export class ForgotPassComponent implements OnInit {
         // console.log(user);
 
         if (user) {
+          this.userId = user.id;
+          console.log(user.id);
           this.service.forgotPassword(formdata.value.email);
-          this.mailForm.reset();
           // console.log('True');
         } else {
-          this.mailForm.reset();
           this.snackbar.opensnackbar('User not found or you have enter wrong email');
           // console.log('False');
         }
+        this.mailForm.reset();
       }
     })
   }

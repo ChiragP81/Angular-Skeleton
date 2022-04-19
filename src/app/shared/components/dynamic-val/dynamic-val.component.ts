@@ -33,7 +33,7 @@ export class DynamicValComponent implements OnInit {
       const value = JSON.stringify(this.regiForm.value);
       console.log(value);
       // this.regiForm.reset();
-      console.log(this.regiForm.value)
+      // console.log(this.regiForm.value)
     }
   }
 
