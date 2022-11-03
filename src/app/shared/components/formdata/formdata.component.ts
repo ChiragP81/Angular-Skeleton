@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AuthService } from '../../services/auth.service';
 import { SnackbarService } from '../../services/snackbar.service';
@@ -11,9 +11,9 @@ import { SnackbarService } from '../../services/snackbar.service';
 })
 export class FormdataComponent implements OnInit {
 
-  regiForm!: FormGroup;
+  regiForm!: UntypedFormGroup;
   button: string = 'Add';
-  constructor(private formbuilder: FormBuilder,
+  constructor(private formbuilder: UntypedFormBuilder,
     private service: AuthService,
     public dialogref: MatDialogRef<FormdataComponent>,
     public snackbar: SnackbarService,

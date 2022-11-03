@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder,  FormGroup, Validators} from '@angular/forms'
+import {UntypedFormBuilder,  UntypedFormGroup, Validators} from '@angular/forms'
 
 
 
@@ -11,11 +11,11 @@ import {FormBuilder,  FormGroup, Validators} from '@angular/forms'
 })
 export class DynamicValComponent implements OnInit {
 
-  regiForm!: FormGroup;
+  regiForm!: UntypedFormGroup;
   showMail!:boolean;
 
 
-  constructor(private formbuilder:FormBuilder) { }
+  constructor(private formbuilder:UntypedFormBuilder) { }
 
   ngOnInit(): void {
     this.regiForm = this.formbuilder.group({

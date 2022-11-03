@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, NgForm, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { SnackbarService } from 'src/app/shared/services/snackbar.service';
 
@@ -14,10 +14,10 @@ export class ForgotPassComponent implements OnInit {
 
 
   userId!:string ;
-  mailForm!: FormGroup;
+  mailForm!: UntypedFormGroup;
   isValid: Boolean = false;
   constructor(
-    private formbuilder: FormBuilder,
+    private formbuilder: UntypedFormBuilder,
     private service: AuthService,
     private snackbar: SnackbarService
   ) { }
